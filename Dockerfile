@@ -19,4 +19,4 @@ RUN git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git .
 
 #build it
 WORKDIR /openpose/build
-RUN cmake .. && make 
+RUN cmake .. && make -j8
