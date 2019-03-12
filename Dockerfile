@@ -8,10 +8,10 @@ git g++ wget make libprotobuf-dev protobuf-compiler libopencv-dev \
 libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
 
 #replace cmake as old version has CUDA variable bugs
-wget https://github.com/Kitware/CMake/releases/download/v3.13.4/cmake-3.13.4-Linux-x86_64.tar.gz
-tar xzf cmake-3.13.4-Linux-x86_64.tar.gz -C /opt
-ENV PATH="/opt/cmake-3.13.4-Linux-x86_64/bin:${PATH}"
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.13.4/cmake-3.13.4-Linux-x86_64.tar.gz && \
+tar xzf cmake-3.13.4-Linux-x86_64.tar.gz -C /opt && \
 rm cmake-3.13.4-Linux-x86_64.tar.gz
+ENV PATH="/opt/cmake-3.13.4-Linux-x86_64/bin:${PATH}"
 
 #get openpose
 WORKDIR /openpose
