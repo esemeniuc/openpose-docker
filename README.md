@@ -1,5 +1,5 @@
 # openpose-docker
-A docker build file for CMU openpose
+A docker build file for CMU openpose with python api support
 
 https://hub.docker.com/r/cwaffles/openpose
 
