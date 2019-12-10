@@ -22,5 +22,5 @@ RUN git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git .
 
 #build it
 WORKDIR /openpose/build
-RUN cmake -DBUILD_PYTHON=ON .. && make -j (nproc)
+RUN cmake -DBUILD_PYTHON=ON .. && make -j `nproc`
 WORKDIR /openpose
