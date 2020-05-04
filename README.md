@@ -8,6 +8,6 @@ https://hub.docker.com/r/cwaffles/openpose
 - CUDA 10.0 or higher on your host, check with `nvidia-smi`
 
 ### Example
-`docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0 cwaffles/openpose`
-
+- -> broken: `docker run -it --rm --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=0 cwaffles/openpose`
+- -> working: `docker run -it --rm --gpus all -e NVIDIA_VISIBLE_DEVICES=0 cwaffles/openpose`
 The Openpose repo is in `/openpose`
