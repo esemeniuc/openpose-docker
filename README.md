@@ -48,7 +48,11 @@ $ bash getModels.sh
 
 # test python examples
 $ cd /openpose/examples/tutorial_api_python
-$ python3 07_hand_from_image.py
+# please follow this commit to fix code(https://github.com/u0251077/openpose-docker/commit/f7cb071b6cca51de7c0404e064b4344eb1c075df)
+$ python3 01_body_from_image.py
 ```
 
 :+1: (success)
+
+#### result
+![](https://i.imgur.com/stkGveW.png)
