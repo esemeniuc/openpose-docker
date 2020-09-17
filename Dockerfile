@@ -8,7 +8,7 @@ python3-dev python3-pip git g++ wget make libprotobuf-dev protobuf-compiler libo
 libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
 
 #for python api
-RUN pip3 install numpy opencv-python 
+RUN pip3 install numpy opencv-python==4.0.0.21
 
 #replace cmake as old version has CUDA variable bugs
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.16.0/cmake-3.16.0-Linux-x86_64.tar.gz && \
