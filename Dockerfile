@@ -1,13 +1,14 @@
 # https://hub.docker.com/r/cwaffles/openpose
-FROM nvidia/cuda:10.0-cudnn7-devel
+FROM nvidia/cuda:11.4.0-cudnn8-devel-ubuntu18.04
 
 #get deps
 RUN apt-get update && \
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-python3-dev python3-pip git g++ wget make libprotobuf-dev protobuf-compiler libopencv-dev \
+python3-dev python3-pip python3-setuptools git g++ wget make libprotobuf-dev protobuf-compiler libopencv-dev \
 libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
 
 #for python api
+RUN pip3 install --upgrade pip
 RUN pip3 install numpy opencv-python 
 
 #replace cmake as old version has CUDA variable bugs
